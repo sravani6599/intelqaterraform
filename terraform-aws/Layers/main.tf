@@ -4,12 +4,12 @@ provider "aws" {
     region = "${var.region}"
 }
 
-module "secrets" {
-  source = "../Modules/secrets"
+#module "secrets" {
+ # source = "../Modules/secrets"
 
-  aws_access_key = var.aws_access_key
-  aws_secret_key = var.aws_secret_key
-}
+  #aws_access_key = var.aws_access_key
+  #aws_secret_key = var.aws_secret_key
+#}
 
 module "lambda"{
     source = "../Modules/lambda"
