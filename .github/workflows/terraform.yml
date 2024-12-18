@@ -50,9 +50,9 @@ jobs:
     #  run: terraform fmt -check
 
     # Generates an execution plan for Terraform
-    - name: Terraform Plan
-      working-directory: ./terraform-aws/Layers
-      run: terraform plan -var="aws_access_key_id=${{ secrets.AWS_ACCESS_KEY_ID }}" -var="aws_secret_access_key=${{ secrets.AWS_SECRET_ACCESS_KEY }}" -var="aws_region=us-west-1"
+    #- name: Terraform Plan
+     # working-directory: ./terraform-aws/Layers
+      #run: terraform plan -var="aws_access_key_id=${{ secrets.AWS_ACCESS_KEY_ID }}" -var="aws_secret_access_key=${{ secrets.AWS_SECRET_ACCESS_KEY }}" -var="aws_region=us-west-1"
     
     #- name: Terraform Apply
      # working-directory: ./terraform-aws/Layers
