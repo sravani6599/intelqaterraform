@@ -26,13 +26,13 @@ resource "aws_cloudwatch_event_target" "check_foo_every_five_minutes" {
 }
 
 # Lambda Permission to allow CloudWatch Events to invoke the Lambda function
-#resource "aws_lambda_permission" "cloudwatch_permission" {
- # statement_id = "AllowExecutionFromCloudWatch"
-  #action       = "lambda:InvokeFunction"
-  #function_name = "${var.function_name}"
-  #principal    = "events.amazonaws.com"
-  #source_arn   = aws_cloudwatch_event_rule.every_five_minutes.arn
-#}
+resource "aws_lambda_permission" "cloudwatch_permission" {
+  statement_id = "AllowExecutionFromCloudWatch"
+  action       = "lambda:InvokeFunction"
+  function_name = "${var.function_name}"
+  principal    = "events.amazonaws.com"
+  source_arn   = aws_cloudwatch_event_rule.every_five_minutes.arn
+}
 
 
 # IAM Role for Lambda to write logs to CloudWatch Logs
