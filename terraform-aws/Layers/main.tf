@@ -13,10 +13,10 @@ provider "aws" {
 
 module "lambda"{
     source = "../Modules/lambda"
-    function_name =  "intelqa"
-    bucket_name = "ai2024intel" 
-    user_pool = "intelqapool"
-    table_name = "dynamodbs3"
+    function_name =  "intelqalambda"
+    bucket_name = "ai2024intelbucketqa" 
+    user_pool = "intelqauserpool"
+    table_name = "dynamodbtables3"
     log_group_name = "/aws/cognito/user-pool-logs"
    # bucket_object = "D:/files/sampleimages/"
 
