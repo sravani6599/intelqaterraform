@@ -32,6 +32,7 @@ resource "aws_lambda_permission" "cloudwatch_permission" {
   function_name = "${var.function_name}"
   principal    = "events.amazonaws.com"
   source_arn   = aws_cloudwatch_event_rule.every_five_minutes.arn
+  depends_on    = [aws_lambda_function.lambda]
 }
 
 
