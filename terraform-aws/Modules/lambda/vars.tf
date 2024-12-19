@@ -35,4 +35,8 @@ variable "log_group_name" {
   #default = " path for the object"
 
 #}
+variable "lambda_logging_policy" {
+  default = "name of the policy"
+  
+}
 

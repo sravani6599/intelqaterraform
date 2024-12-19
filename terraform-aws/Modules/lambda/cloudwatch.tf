@@ -21,8 +21,8 @@ resource "aws_cloudwatch_event_rule" "every_five_minutes" {
 # CloudWatch Event Target to lambda (lambda function)
 resource "aws_cloudwatch_event_target" "check_foo_every_five_minutes" {
   rule      = aws_cloudwatch_event_rule.every_five_minutes.name
-  target_id = "lambda"
-  arn       = aws_lambda_function.lambda.arn
+  target_id = "lambda_function"
+  arn       = aws_lambda_function.lambda_function.arn
 }
 
 # Lambda Permission to allow CloudWatch Events to invoke the Lambda function

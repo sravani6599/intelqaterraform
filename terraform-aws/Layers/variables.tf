@@ -5,5 +5,5 @@ variable "aws_secret_access_key" {
 default = "aws_secret_access_key"
  }
 variable "aws_region" {
-    default = "us-west-1"
+    default = "us-east-2"
 }

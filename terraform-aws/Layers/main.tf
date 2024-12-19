@@ -18,6 +18,7 @@ module "lambda"{
     user_pool = "intelqauserpool"
     table_name = "dynamodbtables3"
     log_group_name = "/aws/cognito/user-pool-logs"
+    
    # bucket_object = "D:/files/sampleimages/"
 
     

@@ -5,7 +5,7 @@ data "archive_file" "zip" {
 }
 
 # Create a Lambda function
-resource "aws_lambda_function" "lambda" {
+resource "aws_lambda_function" "lambda_function" {
   function_name = "${var.function_name}" 
   filename         = data.archive_file.zip.output_path
   source_code_hash = data.archive_file.zip.output_base64sha256
