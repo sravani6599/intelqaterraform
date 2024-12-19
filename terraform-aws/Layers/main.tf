@@ -13,7 +13,7 @@ provider "aws" {
 
 module "lambda"{
     source = "../Modules/lambda"
-    function_name =  "intelqalambda"
+    function_name =  "intellambda"
     bucket_name = "ai2024intelbucketqa" 
     user_pool = "intelqauserpool"
     table_name = "dynamodbtables3"
